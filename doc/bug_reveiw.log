@@ -1,0 +1,13 @@
+BUG Collection
+
+---- bug 00 ----
+discription:
+debug env based on linux-3.10.1
+crashed when execute: BUG_ON(count > sdb->table.nents);
+
+more info refer to: https://groups.google.com/forum/#!msg/fa.linux.kernel/GCm3SXGimE0/zwxeJudRCAAJ
+
+fixing:
+The bug persist, don't kown how to fix it yet.
+from now on, a period of time reveiw the code of raid linux-3.10.1.
+learning and testing stepwise.
