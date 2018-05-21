@@ -8,7 +8,7 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 
-jmd-mod-y 	+= jmd.o
+jmd-mod-y 	+= jmd.o jmd_mem.o
 jraid456-y 	+= jraid5.o
 
 ifdef DEBUG

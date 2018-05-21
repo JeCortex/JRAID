@@ -23,6 +23,7 @@
 #include "jmd.h"
 #include "jmd_k.h"
 #include "jmd_u.h"
+#include "jmd_mem.h"
 
 #define MAX_NAME_LEN 56
 #define MAX_READAHEAD	31
@@ -1887,6 +1888,7 @@ static int __init jmd_init(void)
                 goto err_thread;
         }
 	jmd_alloc(JMD_MAJOR, "jmd0");
+        jmd_cache_mem_init();
 
         
         return 0;
@@ -1918,6 +1920,7 @@ static void __exit jmd_exit(void)
         if(jmd_recovery_thread)
                 jmd_unregister_thread(jmd_recovery_thread);
 
+        jmd_cache_mem_exit();
         kfree(jmddev);
         return;
 }
