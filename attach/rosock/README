@@ -1,0 +1,3 @@
+# rosockt: rbd osd secket
+# socket data transfer between kernel and userspace.
+# just like ceph rbd: libceph.ko and osd deamon.
